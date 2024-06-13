@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'AppleSDGothicNeoM';
+  src: url('./assets/fonts/AppleSDGothicNeoM.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'AppleSDGothicNeoM', sans-serif;
+}
+
 .App {
-  text-align: center;
+  margin: 0 32px 0 32px;
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import PublicKeyDescription from './components/PublicKeyDescription';
 import UserList from './components/UserList';

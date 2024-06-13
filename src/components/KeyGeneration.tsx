@@ -1,28 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import forge from 'node-forge';
 
 interface KeyGenerationProps {
   onGenerateKeys: (keys: { publicKey: string; privateKey: string }[]) => void;
 }
-
-const KeyGenerationContainer = styled.div`
-  margin-bottom: 20px;
-  text-align: center;
-`;
-
-const Button = styled.button`
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  &:disabled {
-    background-color: #ccc;
-  }
-`;
 
 async function generateKeyPair() {
   return new Promise<{ publicKey: string; privateKey: string }>((resolve) => {
@@ -36,7 +18,7 @@ async function generateKeyPair() {
   });
 }
 
-function KeyGeneration({ onGenerateKeys }: KeyGenerationProps) {
+export default function KeyGeneration({ onGenerateKeys }: KeyGenerationProps) {
   const [loading, setLoading] = useState(false);
 
   const handleGenerateKeys = async () => {
@@ -49,12 +31,25 @@ function KeyGeneration({ onGenerateKeys }: KeyGenerationProps) {
   };
 
   return (
-    <KeyGenerationContainer>
+    <>
       <Button onClick={handleGenerateKeys} disabled={loading}>
-        {loading ? 'Generating keys...' : 'Generate Keys for All Users'}
+        {loading ? 'Generating RSA keys...' : 'Generate RSA Keys for All Users'}
       </Button>
-    </KeyGenerationContainer>
+    </>
   );
 }
 
-export default KeyGeneration;
+const Button = styled.button`
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+  border: none;
+  text-decoration: underline;
+
+  &:disabled {
+    color: gray;
+    cursor: not-allowed;
+    text-decoration: none;
+  }
+`;

@@ -1,28 +1,29 @@
-import React from 'react';
 import styled from 'styled-components';
 import { useAppContext } from '../context/AppContext';
 import MessageComponent from './Message';
 
-const MessageListContainer = styled.div`
-  margin-top: 20px;
-  width: 90%;
-
-  @media(min-width: 768px) {
-    width: 80%;
-  }
-`;
-
-function MessageList() {
+export default function MessageList() {
   const { messages, users } = useAppContext();
 
   return (
-    <MessageListContainer>
+    <>
       <h2>Messages</h2>
-      {messages.slice().reverse().map((msg) => (
-        <MessageComponent key={msg.timestamp} message={msg} users={users} />
-      ))}
-    </MessageListContainer>
+      <MessageListContainer>
+        {messages.slice().reverse().map((msg) => (
+          <MessageComponent key={msg.timestamp} message={msg} users={users} />
+        ))}
+      </MessageListContainer>
+    </>
   );
 }
 
-export default MessageList;
+const MessageListContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @media (min-width: 1664px) { /* 832px * 2 */
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+`;
