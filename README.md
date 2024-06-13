@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Public Key Cryptography React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that demonstrates public key cryptography using RSA encryption. Users can generate RSA key pairs, send encrypted or signed messages, and decrypt or verify messages.
 
-## Available Scripts
+이 애플리케이션은 RSA 암호화를 사용하여 공개 키 암호화를 시연하는 React 애플리케이션입니다. 사용자는 RSA 키 쌍을 생성하고, 암호화된 또는 서명된 메시지를 보내며, 메시지를 해독하거나 검증할 수 있습니다.
 
-In the project directory, you can run:
+## Requirements
 
-### `npm start`
+- Node.js
+- npm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Follow these steps to set up and run the project:
 
-### `npm test`
+1. **Clone the repository:**  
+  ```sh
+  git clone https://github.com/yourusername/public-key-cryptography.git
+  cd public-key-cryptography
+  ```
+2. **Install dependencies:**  
+  ```sh
+  npm install
+  ```
+3. **Start the development server:**  
+  ```sh
+  npm start
+  ```
+4. **Open the application in your browser:**  
+The application will automatically open in your default browser. If it doesn't, you can manually open your browser and navigate to http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+애플리케이션이 자동으로 기본 브라우저에서 열립니다. 열리지 않으면 브라우저를 수동으로 열고 http://localhost:3000으로 이동할 수 있습니다.
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Generate RSA key pairs for users
+- Send encrypted messages using recipient's public key
+- Send signed messages using sender's private key
+- Decrypt encrypted messages using recipient's private key
+- Verify signed messages using sender's public key
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 사용자용 RSA 키 쌍 생성
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 수신자의 공개 키를 사용하여 암호화된 메시지 전송
 
-### `npm run eject`
+- 발신자의 개인 키를 사용하여 서명된 메시지 전송
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- 수신자의 개인 키를 사용하여 암호화된 메시지 해독
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 발신자의 공개 키를 사용하여 서명된 메시지 검증
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Libraries Used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### node-forge
 
-## Learn More
+`node-forge` is a comprehensive cryptography library for JavaScript. It provides various cryptographic algorithms and utilities, including RSA key generation, encryption/decryption, and digital signature generation/verification. `node-forge` is used in this project to generate RSA key pairs and handle encryption and decryption processes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+`node-forge`는 JavaScript용 종합 암호화 라이브러리입니다. RSA 키 생성, 암호화/복호화, 디지털 서명 생성/검증을 포함한 다양한 암호화 알고리즘과 유틸리티를 제공합니다. 이 프로젝트에서는 RSA 키 쌍을 생성하고 암호화 및 복호화 과정을 처리하기 위해 `node-forge`를 사용합니다.
