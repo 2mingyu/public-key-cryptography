@@ -13,20 +13,21 @@ This is a React application that demonstrates public key cryptography using RSA 
 
 Follow these steps to set up and run the project:
 
-1. **Clone the repository:**  
+1. **Clone the repository:**
   ```sh
   git clone https://github.com/yourusername/public-key-cryptography.git
   cd public-key-cryptography
   ```
-2. **Install dependencies:**  
+2. **Install dependencies:**
   ```sh
   npm install
   ```
-3. **Start the development server:**  
+3. **Start the development server:**
   ```sh
   npm start
   ```
-4. **Open the application in your browser:**  
+4. **Open the application in your browser:**
+
 The application will automatically open in your default browser. If it doesn't, you can manually open your browser and navigate to http://localhost:3000.
 
 애플리케이션이 자동으로 기본 브라우저에서 열립니다. 열리지 않으면 브라우저를 수동으로 열고 http://localhost:3000으로 이동할 수 있습니다.
