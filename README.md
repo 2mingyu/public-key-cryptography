@@ -18,7 +18,7 @@ Follow these steps to set up and run the project:
 
 1. **Clone the repository:**
   ```sh
-  git clone https://github.com/yourusername/public-key-cryptography.git
+  git clone https://github.com/2mingyu/public-key-cryptography.git
   cd public-key-cryptography
   ```
 2. **Install dependencies:**
