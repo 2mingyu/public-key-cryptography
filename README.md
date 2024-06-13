@@ -4,6 +4,9 @@ This is a React application that demonstrates public key cryptography using RSA 
 
 이 애플리케이션은 RSA 암호화를 사용하여 공개 키 암호화를 시연하는 React 애플리케이션입니다. 사용자는 RSA 키 쌍을 생성하고, 암호화된 또는 서명된 메시지를 보내며, 메시지를 해독하거나 검증할 수 있습니다.
 
+<img src="./images/Image1.png">
+<img src="./images/Image2.png">
+
 ## Requirements
 
 - Node.js
@@ -35,9 +38,13 @@ The application will automatically open in your default browser. If it doesn't, 
 ## Features
 
 - Generate RSA key pairs for users
+
 - Send encrypted messages using recipient's public key
+
 - Send signed messages using sender's private key
+
 - Decrypt encrypted messages using recipient's private key
+
 - Verify signed messages using sender's public key
 
 - 사용자용 RSA 키 쌍 생성
