@@ -33,7 +33,7 @@ Follow these steps to set up and run the project:
 
 The application will automatically open in your default browser. If it doesn't, you can manually open your browser and navigate to http://localhost:3000.
 
-애플리케이션이 자동으로 기본 브라우저에서 열립니다. 열리지 않으면 브라우저를 수동으로 열고 http://localhost:3000으로 이동할 수 있습니다.
+애플리케이션이 자동으로 기본 브라우저에서 열립니다. 열리지 않으면 브라우저를 수동으로 열고 http://localhost:3000 으로 이동할 수 있습니다.
 
 ## Features
 
