@@ -49,7 +49,7 @@ export default function MessageComponent({ message, users }: MessageProps) {
   return (
     <MessageCard>
       <Label><strong>From:</strong> {updatedMessage.sender}</Label>
-      <Label><strong>To (visible to third parties):</strong> {updatedMessage.recipient}</Label>
+      <Label><strong>To (can be seen by others):</strong> {updatedMessage.recipient}</Label>
       <Label><strong>Time:</strong> {new Date(updatedMessage.timestamp).toLocaleString()}</Label>
       <MessageContainer>
         <Label><strong>{updatedMessage.type === 'encrypted' ? 'Encrypted Message' : 'Signed Message'}:</strong></Label>
@@ -66,14 +66,14 @@ export default function MessageComponent({ message, users }: MessageProps) {
         <ActionButtonWrapper>
           <ActionButton onClick={handleDecryptMessage}>Decrypt Message</ActionButton>
           <ButtonDescription>
-            (using <KeyType color={colors.publicKey}>{updatedMessage.recipient}'s public key</KeyType>)
+            (using <KeyType color={colors.privateKey}>{updatedMessage.recipient}'s private key</KeyType>)
           </ButtonDescription>
         </ActionButtonWrapper>
       ) : (
         <ActionButtonWrapper>
           <ActionButton onClick={handleDecryptMessage}>Verify Signature</ActionButton>
           <ButtonDescription>
-            (using <KeyType color={colors.privateKey}>{updatedMessage.sender}'s private key</KeyType>)
+            (using <KeyType color={colors.publicKey}>{updatedMessage.sender}'s public key</KeyType>)
           </ButtonDescription>
         </ActionButtonWrapper>
       )}
